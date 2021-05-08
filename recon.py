@@ -14,8 +14,8 @@ except OSError:
 else:
     print("Successfully created the output directory..".format(path))
 fp = open(fname)
+driver = webdriver.Chrome(options=options, executable_path='chromedriver.exe')
 for line in fp:
-    driver = webdriver.Chrome(options=options, executable_path='chromedriver.exe')
     if line == '\n':
         continue
     else:
